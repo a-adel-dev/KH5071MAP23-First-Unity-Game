@@ -29,12 +29,14 @@ public class Player : MonoBehaviour
         if(other.gameObject.CompareTag("Prizes"))
         {
             Debug.Log("score increase!");
+            other.gameObject.GetComponent<SFXPlayer>().PlaySFX();
             Destroy(other.gameObject);
         }
         else 
         if (other.gameObject.CompareTag("Obstacles"))
         {
             Debug.Log("Decrease HP");
+            other.gameObject.GetComponent<SFXPlayer>().PlaySFX();
         }
     }
 
